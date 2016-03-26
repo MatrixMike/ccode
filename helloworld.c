@@ -26,7 +26,10 @@
 
 int main(int argc, char **argv)
 {
+	int x;
+	for (x=1; x<6; x++){
 		printf("hello world");
+	}
 	return 0;
 }
 
