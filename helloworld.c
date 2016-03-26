@@ -27,8 +27,9 @@
 int main(int argc, char **argv)
 {
 	int x;
+	double v = 3.7;
 	for (x=1; x<6; x++){
-		printf("hello world  %d\n", x);
+		printf("hello world  %d    %f\n", x, x * v);
 	}
 	return 0;
 }
