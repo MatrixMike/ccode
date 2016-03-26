@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 {
 	int x;
 	for (x=1; x<6; x++){
-		printf("hello world\n");
+		printf("hello world  %d\n", x);
 	}
 	return 0;
 }
