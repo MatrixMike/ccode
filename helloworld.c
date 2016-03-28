@@ -24,4 +24,5 @@ int main(int argc, char **argv)
 	}
 	return 0;
 }
+//  could add test for >1 to select 's' in printf
 
