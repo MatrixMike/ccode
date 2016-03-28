@@ -1,0 +1,7 @@
+Thu Nov 19 07:44:31 AEDT 2015 
+
+modulus examples - as inspired by Nicholas at Kids Unlimited
+
+wrapping tape/string around a box - how much tape left over from complete wraps?
+
+

@@ -1,0 +1,14 @@
+Sun Mar 27 11:12:34 AEDT 2016 
+
+An idea to have an introduction to programming workshop - very basic - using geany (pronounced genie as in the magic lantern)
+
+What I do with Linux ( investigating config files - making different systems talk to each other - 
+Linux Mint, Ubuntu, Manjaro and others - package managers are different 
+
+
+Tie it in with github
+
+bring laptops
+install geany 
+
+
