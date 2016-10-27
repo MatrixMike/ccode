@@ -5,7 +5,7 @@
  * 
  * This program is free software; you can redistribute it and/or modify
  * 
- * 
+ * g++-4.8 simple1.cpp -o simple1
  */
 
 
@@ -13,7 +13,7 @@
 
 int main(int argc, char **argv)
 {
-	std::cout << "hello Mike" << std::endl << "hello Mike" << std::endl;
+	std::cout << "hello Mike1" << std::endl << "hello Mike2" << std::endl;
 	return 0;
 }
 
