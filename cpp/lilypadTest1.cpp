@@ -21,7 +21,8 @@
  * 
  */
 
-
+// g++ lilypadTest1.cpp
+// run lint to see what is unused here...
 
 #include <iostream>
 
@@ -35,7 +36,7 @@ int main(int argc, char **argv)
 	// printf(" z %d ", z);
 	LEDarray[z] = z*z;
 	// cout << LEDarray[z];
-	cout << length << 5;
+	std::cout << length << 5;
 	}
 	
 	return 0;

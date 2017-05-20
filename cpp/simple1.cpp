@@ -6,6 +6,7 @@
  * This program is free software; you can redistribute it and/or modify
  * 
  * g++-4.8 simple1.cpp -o simple1
+ * or g++ simple1.cpp -o simple1
  */
 
 
