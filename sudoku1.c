@@ -10,7 +10,8 @@
 
 #include <stdio.h>
 #include <stdbool.h>
-
+// 20.05.2017 14:57:50
+// 
 int main(int argc, char **argv)
 {
 	int zone1;		//  = 0x01d3;
@@ -22,6 +23,8 @@ int main(int argc, char **argv)
 	zone1 = 0b0111010011;
 	zone2 = 0b100;		// 4
 	zone2 = ~zone2;		// compliment {NOT} 
+	// repeated use of zone3 to demo compilation but lint 
+	// picks up that zone3 is re-assigned before being used
 	zone3 = zone1 | zone2;	// OR
 	zone3 = zone1 & zone2;	// AND
 	zone3 = zone1 ^ zone2;	// XOR
