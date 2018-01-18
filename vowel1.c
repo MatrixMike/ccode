@@ -35,7 +35,7 @@
 
 
 //#include <stdio.h>
-//#include <string.h>
+#include <string.h>
  
 int check_vowel(char);
  
@@ -46,9 +46,15 @@ int main()
  
   printf("Enter a string to delete vowels\n");
   gets(s);
- 
+
+/*   while(s[i]) {
+      putchar (toupper(s[i]));
+      i++;
+   }
+*/
+
   for(i = 0; s[i] != '\0'; i++) {
-    if(check_vowel(s[i]) == 0) {       //not a vowel
+    if(check_vowel(toupper(s[i])) == 0) {       //not a vowel
       t[j] = s[i];
       j++;
     }
@@ -67,15 +73,15 @@ int main()
 int check_vowel(char c)
 {
   switch(c) {
-    case 'a':
+//    case 'a':
     case 'A':
-    case 'e':
+//    case 'e':
     case 'E':
-    case 'i':
+//    case 'i':
     case 'I':
-    case 'o':
+//   case 'o':
     case 'O':
-    case 'u':
+//    case 'u':
     case 'U':
       return 1;
     default:
