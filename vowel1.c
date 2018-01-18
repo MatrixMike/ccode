@@ -34,7 +34,7 @@
 
 
 
-//#include <stdio.h>
+#include <stdio.h>
 #include <string.h>
  
 int check_vowel(char);
@@ -45,7 +45,7 @@ int main()
   int i, j = 0;
  
   printf("Enter a string to delete vowels\n");
-  gets(s);
+  gets(s);  // better use fgets
 
 /*   while(s[i]) {
       putchar (toupper(s[i]));
