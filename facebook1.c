@@ -35,6 +35,7 @@ int main(int argc, char **argv)
 	// 
 //	printf ("eval :%.2f\n", six/ two (one + two)     );
 	printf ( "%.2f\n", 2 * (1 + twof ) );
+	printf ( "%.2f\n", 6 / 2 * (1 + twof ) );
 	printf ("ans %.2f\n", six / two * (one + twof) );
 	return 0;
 }
