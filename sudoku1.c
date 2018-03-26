@@ -35,5 +35,8 @@ int main(int argc, char **argv)
 //      keep_going = true;
 //      keep_going = false;
 	printf(" test value : %d: %d: %d\n", zone1, zone2, zone3);
+	printf(" test value : %04x: %04x: %04x\n", zone1, zone2, zone3);
+	printf(" test value : %04x: %04x: %04x: %04x\n", 192,168,0,10);
+	printf(" test value : %04x: %04x: %04x: %04x\n", 10,0,0,138);
 	return 0;
 }
