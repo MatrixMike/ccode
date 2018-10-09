@@ -24,12 +24,13 @@
 
 #include <stdio.h>
 
-int main(int argc, char **argv)
+int
+main (int argc, char **argv)
 {
-	int x;
-	for (x=9; x < 36; x++){
-	printf("product of 11 and %2d %3d\n", x, x*11);
+  int x;
+  for (x = 9; x < 36; x++)
+    {
+      printf ("product of 11 and %2d %3d\n", x, x * 11);
+    }
+  return 0;
 }
-	return 0;
-}
-

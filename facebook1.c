@@ -1,7 +1,7 @@
 /*
- * lilypadTest1.cpp
+ * facebook1.c
  * 
- * Copyright 2015 Michael Hewitt <mikeh@electroteach.com>
+ * Copyright 2018 mikeh <mikeh@mikeh-desktop>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,24 +21,22 @@
  * 
  */
 
-// g++ lilypadTest1.cpp
-// run lint to see what is unused here...
 
-#include <iostream>
+#include <stdio.h>
 
 int main(int argc, char **argv)
 {
-	
-	int LEDarray[4] ; int length =4;
-	
-	for (int z=0; z<length ; z++) {
-	//	cout << z;
-	// printf(" z %d ", z);
-	LEDarray[z] = z*z;
-	// cout << LEDarray[z];
-	std::cout << length << 5;
-	}
-	
+	int one=1;
+	int two=2;
+	int six = 6;
+	float twof = 2.0;
+	// BODMAS
+	// evaluate 6 :- 2 ( 1 + 2 )          // where :- is the division 
+	// 
+//	printf ("eval :%.2f\n", six/ two (one + two)     );
+	printf ( "%.2f\n", 2 * (1 + twof ) );
+	printf ( "%.2f\n", 6 / 2 * (1 + twof ) );
+	printf ("ans %.2f\n", six / two * (one + twof) );
 	return 0;
 }
 
