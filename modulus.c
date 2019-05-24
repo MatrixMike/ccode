@@ -3,16 +3,18 @@
 // 20.05.2017 14:50:57
 // changes after running cppcheck (lint)
 // testing modulus arithmetic 
-
-int main ()  {
-//	int i,r,m;
-
-	for (int i=0; i<10; i++) {
-		int r,m;
-		r = i / 3;
-		m = i % 3;
-		printf(" i=  %d  %d   %d   \n", i , r, m);
-	}
-
-	return(0);
+// 24.05.2019 11:23:51
+int
+main ()
+{
+//      int i,r,m;
+#define divisor 4
+  for (int i = 0; i < 20; i++)
+    {
+      int r, m;
+      r = i / divisor;
+      m = i % divisor;
+      printf (" i=  %2d  %2d   %2d   \n", i, r, m);
+    }
+  return (0);
 }
