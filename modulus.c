@@ -11,10 +11,14 @@ main ()
 #define divisor 4
   for (int i = 0; i < 20; i++)
     {
-      int r, m;
-      r = i / divisor;
-      m = i % divisor;
-      printf (" i=  %2d  %2d   %2d   \n", i, r, m);
+      int r, m, rx;
+      r =  i / divisor;
+      m =  i % divisor;
+      rx = r;
+      // current project seems to require OFF and ON in blocks of four
+      // so extra processing on r needed
+      // 
+      printf (" i=  %2d  %2d  %2d  %2d   \n", i, r, rx, m);
     }
   return (0);
 }
