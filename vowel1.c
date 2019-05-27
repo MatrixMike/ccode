@@ -61,7 +61,7 @@ int main()
 */
 
   for(i = 0; s[i] != '\0'; i++) {
-    if(check_for_vowel(toupper(s[i])) == 0) {       //not a vowel
+    if(check_vowel(toupper(s[i])) == 0) {       //not a vowel
       t[j] = s[i];
       j++;
     }
