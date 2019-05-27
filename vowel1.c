@@ -38,7 +38,7 @@
 	return 0;
 }
 */
-
+// Test string with UPPER and LOWER upper AND and lower characters in IN
 #include <stdio.h>
 #include <string.h>
 int check_for_vowel (char c);
@@ -64,15 +64,15 @@ main ()
    }
 */
 
-  for (i = 0; check_vowel[i] != '\0'; i++)  // loop through the input string
+  for (i = 0; check_vowel[i] != '\0'; i++)	// loop through the input string
     {
-      printf ("\n1  %x  ", check_vowel[i]); // print each char
+//      printf ("\n1  %x  ", check_vowel[i]); // print each char
       // check each incoming char in string 
-      if (check_for_vowel (toupper (check_vowel[i])) == 0)  // if char is a vowel  
+      if (check_for_vowel (toupper (check_vowel[i])) == 0)	// if char is a vowel  
 	{			//not a vowel
-	  printf ("\n2  %x  ", check_vowel[i]); // print it
-	  t[j] = check_vowel[i];                // copy to out put array
-	  j++;                                  // incr output pointer
+//        printf ("\n2  %x  ", check_vowel[i]); // print it
+	  t[j] = check_vowel[i];	// copy to out put array
+	  j++;			// incr output pointer
 	}
     }
 
@@ -80,7 +80,7 @@ main ()
 
   strcpy (s, t);		//We are changing initial string. copy rhs to lhs ! 
 
-  printf ("\nString after deleting vowels: %s\n", s);
+  printf ("\nString after deleting vowels:\n%s\n", s);
 
   return 0;
 }
