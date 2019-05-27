@@ -41,18 +41,22 @@
 
 #include <stdio.h>
 #include <string.h>
-int check_for_vowel(char c);
- 
+int check_for_vowel (char c);
+
 //int check_vowel(char);
 // char check_vowel(char);
- char check_vowel[100];
-int main()
+char check_vowel[100];
+int
+main ()
 {
   char s[100], t[100];
   int i, j = 0;
- 
-  printf("Enter a string to delete vowels\n");
-  fgets(check_vowel, sizeof(check_vowel), stdin);  // better use fgets
+  //int check_vowel(char);
+// char check_vowel(char);
+  char check_vowel[100];
+
+  printf ("Enter a string to delete vowels\n");
+  fgets (check_vowel, sizeof (check_vowel), stdin);	// better use fgets
 
 /*   while(s[i]) {
       putchar (toupper(s[i]));
@@ -60,38 +64,45 @@ int main()
    }
 */
 
-  for(i = 0; s[i] != '\0'; i++) {
-    if(check_vowel(toupper(s[i])) == 0) {       //not a vowel
-      t[j] = s[i];
-      j++;
+  for (i = 0; s[i] != '\0'; i++)  // loop through the input string
+    {
+      printf ("\n1  %x  ", check_vowel[i]); // print each char
+      // check each incoming char in string 
+      if (check_for_vowel (toupper (check_vowel[i])))  // if char is a vowel  
+	{			//not a vowel
+	  printf ("\n2  %x  ", check_vowel[i]); // print it
+	  t[j] = check_vowel[i];                // copy to out put array
+	  j++;                                  // incr output pointer
+	}
     }
-  }
- 
+
   t[j] = '\0';
- 
-  strcpy(s, t);    //We are changing initial string
- 
-  printf("String after deleting vowels: %s\n", s);
- 
+
+  strcpy (s, t);		//We are changing initial string. copy rhs to lhs ! 
+
+  printf ("\nString after deleting vowels: %s\n", s);
+
   return 0;
 }
- 
- 
-int check_for_vowel(char c)
+
+
+int
+check_for_vowel (char c)
 {
-  switch(c) {
-//    case 'a':
+  switch (c)
+    {
+    case 'a':
     case 'A':
-//    case 'e':
+    case 'e':
     case 'E':
-//    case 'i':
+    case 'i':
     case 'I':
-//   case 'o':
+    case 'o':
     case 'O':
-//    case 'u':
+    case 'u':
     case 'U':
       return 1;
     default:
       return 0;
-  }
+    }
 }
