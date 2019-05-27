@@ -64,11 +64,11 @@ main ()
    }
 */
 
-  for (i = 0; s[i] != '\0'; i++)  // loop through the input string
+  for (i = 0; check_vowel[i] != '\0'; i++)  // loop through the input string
     {
       printf ("\n1  %x  ", check_vowel[i]); // print each char
       // check each incoming char in string 
-      if (check_for_vowel (toupper (check_vowel[i])))  // if char is a vowel  
+      if (check_for_vowel (toupper (check_vowel[i])) == 0)  // if char is a vowel  
 	{			//not a vowel
 	  printf ("\n2  %x  ", check_vowel[i]); // print it
 	  t[j] = check_vowel[i];                // copy to out put array
