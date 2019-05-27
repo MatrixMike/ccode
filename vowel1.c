@@ -21,9 +21,16 @@
  * 
  */
 // https://www.programmingsimplified.com/c/source-code/c-program-remove-vowels-from-string
+// https://stackoverflow.com/questions/30890696/why-gets-is-deprecated)
 
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
+#include <ctype.h>
+
+#include <stdbool.h>		//, one can use the more intuitive name bool
+#include <assert.h>
 /*
  * int main(int argc, char **argv)
 {
@@ -32,20 +39,20 @@
 }
 */
 
-
-
 #include <stdio.h>
 #include <string.h>
+int check_for_vowel(char c);
  
-int check_vowel(char);
- 
+//int check_vowel(char);
+// char check_vowel(char);
+ char check_vowel[100];
 int main()
 {
   char s[100], t[100];
   int i, j = 0;
  
   printf("Enter a string to delete vowels\n");
-  gets(s);  // better use fgets
+  fgets(check_vowel, sizeof(check_vowel), stdin);  // better use fgets
 
 /*   while(s[i]) {
       putchar (toupper(s[i]));
@@ -54,7 +61,7 @@ int main()
 */
 
   for(i = 0; s[i] != '\0'; i++) {
-    if(check_vowel(toupper(s[i])) == 0) {       //not a vowel
+    if(check_for_vowel(toupper(s[i])) == 0) {       //not a vowel
       t[j] = s[i];
       j++;
     }
@@ -70,7 +77,7 @@ int main()
 }
  
  
-int check_vowel(char c)
+int check_for_vowel(char c)
 {
   switch(c) {
 //    case 'a':
