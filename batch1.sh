@@ -1,6 +1,6 @@
 #!/bin/bash
 # Fri Apr 27 23:49:28 AEST 2018 
-for file in diagonal facebook1 helloworld modulus sudoku1 test times11 vowel1 fgetsTest strcpy1 times11
+for file in diagonal facebook1 helloworld modulus sudoku1 test times11 vowel1 fgetsTest strcpy1 times11 seqTestB
 do
   echo $file.c
   rm $file
