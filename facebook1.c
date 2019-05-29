@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 	// BODMAS
 	// evaluate 6 :- 2 ( 1 + 2 )          // where :- is the division 
 	// 
-//	printf ("eval :%.2f\n", six/ two (one + two)     );
+	printf ("eval :%.2d\n", six/ two * (one + two)     );
 	printf ( "%.2f\n", 2 * (1 + twof ) );
 	printf ( "%.2f\n", 6 / 2 * (1 + twof ) );
 	printf ("ans %.2f\n", six / two * (one + twof) );
