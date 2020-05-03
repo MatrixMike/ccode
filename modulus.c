@@ -18,7 +18,9 @@ main ()
       // current project seems to require OFF and ON in blocks of four
       // so extra processing on r needed
       // 
-      printf (" i=  %2d  %2d  %2d  %2d   \n", i, r, rx, m);
+      printf (" i=  %2d  %2d  %2d  %2d   ", i, r, rx, m);
+          printf(" >%2d \n",(((i % 2)%2 == 0) ? 1 : -1));
     }
+
   return (0);
 }
