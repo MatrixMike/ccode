@@ -5,9 +5,10 @@
  * 
  * This program is free software; you can redistribute it and/or modify
  * 
- */
-// need to link with -lm option to include maths library
 
+ need to link with -lm option to include maths library
+ */
+ 
 #include <stdio.h>
 #include <math.h>
 

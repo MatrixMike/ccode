@@ -1,9 +1,10 @@
 #include <stdio.h>
-// 12 jun  2015
-// 20.05.2017 14:50:57
-// changes after running cppcheck (lint)
-// testing modulus arithmetic 
-// 24.05.2019 11:23:51
+/* 12 jun  2015
+ 20.05.2017 14:50:57
+ changes after running cppcheck (lint)
+ testing modulus arithmetic 
+ 24.05.2019 11:23:51
+ * */
 int
 main ()
 {

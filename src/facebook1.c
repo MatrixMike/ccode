@@ -30,9 +30,9 @@ int main(int argc, char **argv)
 	int two=2;
 	int six = 6;
 	float twof = 2.0;
-	// BODMAS
+	/* BODMAS
 	// evaluate 6 :- 2 ( 1 + 2 )          // where :- is the division 
-	// 
+	*/ 
 	printf ("eval :%.2d\n", six/ two * (one + two)     );
 	printf ( "%.2f\n", 2 * (1 + twof ) );
 	printf ( "%.2f\n", 6 / 2 * (1 + twof ) );

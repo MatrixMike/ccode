@@ -20,8 +20,14 @@
  * 
  * 
  */
+/*
 // https://www.programmingsimplified.com/c/source-code/c-program-remove-vowels-from-string
 // https://stackoverflow.com/questions/30890696/why-gets-is-deprecated)
+
+
+*/
+ 
+
 
 #include <stdio.h>
 #include <string.h>
