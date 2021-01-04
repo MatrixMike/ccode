@@ -4,16 +4,14 @@ IDIR =../include
 # Which compiler
 CC=gcc
 
-CFLAGS=-I$(IDIR)
+#CFLAGS=-I$(IDIR)
 
-ODIR=obj
+ODIR =obj
 LDIR =../lib
 
-# Options for development
-CFLAGS=-g -Wall -ansi
+# Options for development : check -ansi for comment style
+CFLAGS=-g -Wall  -lm 
 
-# Options for release
-# CFLAGS=-O -Wall -ansi
 
 # Local Libraries
 MYLIB=mylib.a
@@ -24,11 +22,12 @@ DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 _OBJ = hellomake.o hellofunc.o 
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
-sudoku1: sudoku1.c hellofunc.c sudoku1.h
-	gcc -o sudoku1 sudoku1.c hellofunc.c -I.
 
 $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
+
+sudoku1: sudoku1.c hellofunc.c sudoku1.h
+	gcc -o sudoku1 sudoku1.c hellofunc.c -I.
 
 hellomake: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
