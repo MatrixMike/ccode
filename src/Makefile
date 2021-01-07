@@ -1,9 +1,9 @@
-all: sudoku1
+#all: sudoku1
 
 IDIR =../include
 # Which compiler
-CC=gcc
-
+#CC=gcc
+CC=tcc
 #CFLAGS=-I$(IDIR)
 
 ODIR =obj
@@ -26,8 +26,12 @@ OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-sudoku1: sudoku1.c hellofunc.c sudoku1.h
-	gcc -o sudoku1 sudoku1.c hellofunc.c -I.
+vowel1: vowel1.c  
+	$(CC) -o vowel1  vowel1.c -I.
+
+sudoku1: sudoku1.c  
+	$(CC) -o sudoku1 sudoku1.c  -I.
+
 
 hellomake: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
@@ -37,3 +41,4 @@ hellomake: $(OBJ)
 clean:
 	rm -f $(ODIR)/*.o *~ core $(IDIR)/*~  $(hellomake)
 
+# DO NOT DELETE
