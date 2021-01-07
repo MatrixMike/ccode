@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdbool.h>		//, one can use the more intuitive name bool
 #include <assert.h>
-#include "seqTest.h"
+// #include "seqTest.h"
 // to build the sequence 
 void tableprint ();
 int seqTestB ();

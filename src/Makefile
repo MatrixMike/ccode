@@ -1,5 +1,3 @@
-#all: sudoku1
-
 IDIR =../include
 # Which compiler
 #CC=gcc
@@ -12,6 +10,7 @@ LDIR =../lib
 # Options for development : check -ansi for comment style
 CFLAGS=-g -Wall  -lm 
 
+all:	times11 sudoku1 vowel1 seqTestB logicAnd facebook1 diagonal
 
 # Local Libraries
 MYLIB=mylib.a
@@ -27,11 +26,16 @@ $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 vowel1: vowel1.c  
-	$(CC) -o vowel1  vowel1.c -I.
+	$(CC) -o $(ODIR)/vowel1  vowel1.c -I.
 
 sudoku1: sudoku1.c  
-	$(CC) -o sudoku1 sudoku1.c  -I.
+	$(CC) -o $(ODIR)/sudoku1 sudoku1.c  -I.
 
+times11: times11.c  
+	$(CC) -o $(ODIR)/times11 times11.c  -I.
+
+seqTestB: seqTestB.c  
+	$(CC) -o $(ODIR)/seqTestB seqTestB.c  -I.
 
 hellomake: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
