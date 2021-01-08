@@ -3,6 +3,7 @@ IDIR =../include
 CC=gcc
 #CC=tcc
 #CFLAGS=-I$(IDIR)
+C99MODE=-std=c99
 LFLAGS=-lm
 ODIR =obj
 LDIR =../lib
@@ -10,7 +11,7 @@ LDIR =../lib
 # Options for development : check -ansi for comment style
 CFLAGS=-g -Wall  -lm 
 
-all:	times11 sudoku1 vowel1 seqTestB logicAnd facebook1 diagonal hellomake
+all:	times11 test sudoku1 vowel1 seqTestB logicAnd facebook1 diagonal hellomake
 
 # Local Libraries
 MYLIB=mylib.a
@@ -25,6 +26,9 @@ OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
+test: test.c  
+	$(CC) -o $(ODIR)/test  test.c -I.
+
 vowel1: vowel1.c  
 	$(CC) -o $(ODIR)/vowel1  vowel1.c -I.
 
@@ -38,7 +42,7 @@ diagonal: diagonal.c
 	$(CC) -o $(ODIR)/diagonal  diagonal.c $(LFLAGS) -I.
 
 seqTestB: seqTestB.c  
-	$(CC) $(IDIR) -o $(ODIR)/seqTestB seqTestB.c  -I.
+	$(CC) $(IDIR) $(C99MODE) -o $(ODIR)/seqTestB seqTestB.c  -I.
 
 sudoku1: sudoku1.c  
 	$(CC) -o $(ODIR)/sudoku1 sudoku1.c  -I.
