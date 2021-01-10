@@ -33,7 +33,7 @@ vowel1: vowel1.c
 	$(CC) -o $(ODIR)/vowel1  vowel1.c -I.
 
 logicAnd: logicAnd.c  
-	$(CC) -o $(ODIR)/logicAnd  logicAnd.c -I.
+	$(CC) $(C99MODE) -o $(ODIR)/logicAnd  logicAnd.c -I.
 
 facebook1: facebook1.c  
 	$(CC) -o $(ODIR)/facebook1  facebook1.c -I.
@@ -42,7 +42,7 @@ diagonal: diagonal.c
 	$(CC) -o $(ODIR)/diagonal  diagonal.c $(LFLAGS) -I.
 
 seqTestB: seqTestB.c  
-	$(CC) $(IDIR) $(C99MODE) -o $(ODIR)/seqTestB seqTestB.c  -I.
+	$(CC) $(C99MODE) -o $(ODIR)/seqTestB seqTestB.c  -I.
 
 sudoku1: sudoku1.c  
 	$(CC) -o $(ODIR)/sudoku1 sudoku1.c  -I.
