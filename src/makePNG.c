@@ -11,7 +11,7 @@
 #include <math.h>
 #include <malloc.h>
 #include <png.h>
-#include "png_create.c"
+// #include "png_create.c"
 
 // Creates a test image for saving. Creates a Mandelbrot Set fractal of size width x height
 float *createMandelbrotImage(int width, int height, float xS, float yS, float rad, int maxIteration);
