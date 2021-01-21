@@ -1,0 +1,13 @@
+# The pattern for patsubst, does NOT contain '%'
+foo := $(patsubst  x,y,x    x    x)
+# The pattern for patsubst, does contain '%'
+bar := $(patsubst x%,y,x    x    x)
+
+
+# The variable 'foo', is a result from a patsubst-pattern, that did NOT contain a '%'
+# The variable 'bar', is a result from a patsubst-pattern, that did contain a '%'
+all ::
+    @echo 'foo is: "$(foo)"'
+    @echo 'bar is: "$(bar)"'
+
+

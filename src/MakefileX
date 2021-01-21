@@ -1,10 +1,4 @@
-# Mon 18 Jan 2021 17:00:52 AEDT  
-# started using this as a template for other Makefiles
-# https://www.gnu.org/software/make/manual/html_node/Makefile-Basics.html#Makefile-Basics
-SHELL = /bin/sh
-.SUFFIXES:
-.SUFFIXES: .c .o
-IDIR =../include
+#IDIR =../include
 # Which compiler
 CC=gcc
 #CC=tcc
@@ -13,12 +7,13 @@ C99MODE=-std=c99
 LFLAGS=-lm
 ODIR =obj
 LDIR =../lib
-
+#IN2=-I.
 # Options for development : check -ansi for comment style
 CFLAGS=-g -Wall  -lm 
 
 all:	times11 test sudoku1 vowel1 seqTestB logicAnd facebook1 diagonal hellomake
-
+SRCS=times11.c test.c sudoku1.c vowel1.c seqTestB.c logicAnd.c facebook1.c diagonal.c hellomake.c
+TARG = $(SRCS:.c=)
 # Local Libraries
 MYLIB=mylib.a
 
@@ -33,28 +28,28 @@ $(ODIR)/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 test: test.c  
-	$(CC) -o $(ODIR)/test  test.c -I.
+	$(CC) -o $(ODIR)/test  test.c $(IN2)
 
 vowel1: vowel1.c  
-	$(CC) -o $(ODIR)/vowel1  vowel1.c -I.
+	$(CC) -o $(ODIR)/vowel1  vowel1.c $(IN2)
 
 logicAnd: logicAnd.c  
-	$(CC) $(C99MODE) -o $(ODIR)/logicAnd  logicAnd.c -I.
+	$(CC) -o $(ODIR)/logicAnd  logicAnd.c $(IN2)
 
 facebook1: facebook1.c  
-	$(CC) -o $(ODIR)/facebook1  facebook1.c -I.
+	$(CC) -o $(ODIR)/facebook1  facebook1.c $(IN2)
 
 diagonal: diagonal.c  
-	$(CC) -o $(ODIR)/diagonal  diagonal.c $(LFLAGS) -I.
+	$(CC) -o $(ODIR)/diagonal  diagonal.c $(LFLAGS) $(IN2)
 
 seqTestB: seqTestB.c  
-	$(CC) $(C99MODE) -o $(ODIR)/seqTestB seqTestB.c  -I.
+	$(CC) $(IDIR) $(C99MODE) -o $(ODIR)/seqTestB seqTestB.c  $(IN2)
 
 sudoku1: sudoku1.c  
-	$(CC) -o $(ODIR)/sudoku1 sudoku1.c  -I.
+	$(CC) -o $(ODIR)/sudoku1 sudoku1.c  $(IN2)
 
 times11: times11.c  
-	$(CC) -o $(ODIR)/times11 times11.c  -I.
+	$(CC) -o $(ODIR)/times11 times11.c  $(IN2)
 
 hellomake: helloworld.c
 	$(CC) -o $(ODIR)/hellomake helloworld.c 
@@ -65,6 +60,6 @@ hellomake: helloworld.c
 .PHONY: clean
 
 clean:
-	rm -f $(ODIR)/*.o *~ core $(IDIR)/*~  $(hellomake)
+	rm -f $(ODIR)/*.o *~ core $(IDIR)/*~  $(hellomake) obj/$(TARG)
 
 # DO NOT DELETE
